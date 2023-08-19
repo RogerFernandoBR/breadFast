@@ -4,10 +4,11 @@
 .main-container {
     width: calc(100vw - 40px);
     height: 100vh;
-    background-color: #040404;
+    background-color: #000000;
     color: #ffffff;
     padding-left: 20px;
     padding-right: 20px;
+    overflow: hidden;
 
     .header-container {
         display: flex;
@@ -15,6 +16,7 @@
         align-items: center;
         height: 130px;
         font-family: 'Jost';
+        z-index: 1;
 
         .header-left {
             display: flex;
@@ -24,12 +26,20 @@
             font-family: 'Jost';
 
             .logo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                font-family: 'Petit Formal Script';
+
                 img {
                     width: 130px;
                     mix-blend-mode: luminosity;
                     margin-top: -10px;
                     -webkit-filter: hue-rotate(90deg) brightness(100%) grayscale(500%);
                     filter: hue-rotate(90deg) brightness(500%) grayscale(100);
+                    margin-right: -30px;
+                    margin-top: 5px;
                 }
             }
     
@@ -102,6 +112,7 @@
             align-items: center;
             flex-wrap: wrap-reverse;
             width: 100%;
+            z-index: 1;
 
             .title {
                 font-family: 'Petit Formal Script';
@@ -138,7 +149,16 @@
             text-align: center;
             letter-spacing: 15px;
             line-height: 40px;
+            z-index: 1;
+        }
 
+        .big-img {
+            width: calc(100% + 80px);
+            height: 100%;
+            background-image: url("../assets/img/pao-wide2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
         }
     }
 }
