@@ -46,5 +46,9 @@
 @media (max-width: 1055px) {
     .content-container {
         height: calc(100vh - 50px);
+
+        .first-row {
+            margin-top: 50px;
+        }
     }
 }
