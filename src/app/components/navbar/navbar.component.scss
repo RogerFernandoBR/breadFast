@@ -7,6 +7,10 @@
     font-family: 'Jost';
     z-index: 1;
 
+    .btn-hamburger {
+        display: none;
+    }
+
     .header-left {
         display: flex;
         justify-content: flex-start;
@@ -31,10 +35,6 @@
                 filter: hue-rotate(90deg) brightness(500%) grayscale(100);
                 margin-right: -30px;
                 margin-top: 5px;
-            }
-
-            .menu {
-                display: none;
             }
         }
 
@@ -62,7 +62,110 @@
 
 @media (max-width: 1055px) {
     .header-container {
-        height: 0px;
+        height: 50px;
+
+        &.hide-aside {
+            height: 50px;
+            width: 50px;
+            border: none;
+    
+            .header-left {
+                animation-duration: 3s;
+                animation-name: slideout;
+            }
+        }
+
+        .btn-hamburger {
+            height: 32px;
+            width: 40px;
+            cursor: pointer;
+            display: block;
+            z-index: 1000;
+            margin-top: 24px;
+        }
+
+        .btn-hamburger {
+            height: 32px;
+            width: 40px;
+            cursor: pointer;
+            margin-right: 12px;
+
+            span,
+            span::before,
+            span::after {
+                background: #795548;
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 3px;         
+                margin-top: 13px; 
+
+                -webkit-transition: .3s ease-in-out .3s;
+                -moz-transition: .3s ease-in-out .3s;
+                -o-transition: .3s ease-in-out .3s;
+                transition: .3s ease-in-out .3s;
+            }
+
+            span::before {
+                margin-top:-12px;
+                
+                -webkit-transition: .3s ease-in-out;
+                -moz-transition: .3s ease-in-out;
+                -o-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+
+            span::after {
+                margin-top:12px;
+                
+                -webkit-transition: .3s ease-in-out;
+                -moz-transition: .3s ease-in-out;
+                -o-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+
+            &.active span {
+                background: transparent;
+                
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+
+                -webkit-transform:rotate(-90deg);
+                -moz-transform:rotate(-90deg);
+                -o-transform:rotate(-90deg);
+                transform:rotate(-90deg);
+            }
+
+            &.active span::before {
+                margin-top:0;
+                
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+
+                -webkit-transition-delay: .5s;
+                -moz-transition-delay: .5s;
+                -o-transition-delay: .5s;
+                transition-delay: .5s;
+            }
+
+            &.active span::after {
+                margin-top:0;
+
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+
+                -webkit-transition-delay: .6s;
+                -moz-transition-delay: .6s;
+                -o-transition-delay: .6s;
+                transition-delay: .5s;
+            }
+        }
 
         .header-left {
             height: 100vh;
@@ -76,22 +179,29 @@
             flex-direction: column;
             flex-wrap: nowrap;
             background-color: #000000;
-            border-right: 0.5px solid #ffd70033;;
+            border-right: 0.5px solid #ffd70033;
+            animation-duration: 3s;
+            animation-name: slidein;
             
 
             .logo {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                justify-content: space-between;
+                justify-content: flex-start;
                 align-items: center;
+                width: calc(100% - 50px);
+                margin: 25px;
+                margin-left: 25px;
 
                 .logo-svg {
-                    margin-left: -50px;
+                    display: none;
                 }
 
                 .label {
-                    width: 100px;
+                    width: 148px;
+                    font-size: 24px;
+                    margin-left: 50px;
                 }
 
                 .menu {
@@ -125,5 +235,28 @@
                 }
             }
         }
+    }
+}
+
+@keyframes slidein {
+    from {
+      margin-left: -100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      display: block;
+    }
+}
+
+@keyframes slideout {
+    from {
+      margin-left: 0%;
+    }
+  
+    to {
+      margin-left: -100%;
+      display: none;
+      transition-delay: 3000ms;
     }
 }

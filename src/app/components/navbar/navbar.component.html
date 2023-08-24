@@ -1,9 +1,11 @@
-<div class="header-container">
+<div class="header-container" [ngClass]="{'hide-aside': !hamburger}">
+  <div class="btn-hamburger" [ngClass]="{'active': hamburger}" (click)="toggleMenu()">
+    <span></span>                
+  </div>
     <div class="header-left">
-      <div class="logo">
+      <div class="logo">        
         <img class="logo-svg" src="../assets/img/bakery.svg" alt="">
         <span class="label">Bread Fast</span>
-        <img class="menu" src="../assets/img/burger.svg" alt="">
       </div>
       <ol class="menu">
         <li>Home</li>
