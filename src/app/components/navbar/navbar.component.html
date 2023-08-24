@@ -1,4 +1,4 @@
-<div class="header-container" [ngClass]="{'hide-aside': !hamburger}">
+<div class="header-container" [ngClass]="{'hide-aside': !hamburger, 'show-aside': hamburger}">
   <div class="btn-hamburger" [ngClass]="{'active': hamburger}" (click)="toggleMenu()">
     <span></span>                
   </div>

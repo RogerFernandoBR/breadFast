@@ -75,6 +75,14 @@
             }
         }
 
+        &.show-aside {
+            .header-left {
+                display: flex;
+                animation-duration: 3s;
+                animation-name: slidein;
+            }
+        }
+
         .btn-hamburger {
             height: 32px;
             width: 40px;
@@ -175,13 +183,11 @@
             position: absolute;
             top: 0;
             left: 0;
-            display: flex;
+            display: none;
             flex-direction: column;
             flex-wrap: nowrap;
             background-color: #000000;
             border-right: 0.5px solid #ffd70033;
-            animation-duration: 3s;
-            animation-name: slidein;
             
 
             .logo {
@@ -240,23 +246,26 @@
 
 @keyframes slidein {
     from {
-      margin-left: -100%;
+        transition-delay: 3000ms;
+        margin-left: -100%;
+        display: none;
     }
   
     to {
-      margin-left: 0%;
-      display: block;
+        margin-left: 0%;
+        display: block;
     }
 }
 
 @keyframes slideout {
     from {
-      margin-left: 0%;
+        margin-left: 0%;
+        display: block;
     }
   
     to {
-      margin-left: -100%;
-      display: none;
-      transition-delay: 3000ms;
+        transition-delay: 3000ms;
+        margin-left: -100%;
+        display: none;
     }
 }
