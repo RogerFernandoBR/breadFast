@@ -1,0 +1,25 @@
+.stamp {
+    font-family: "Jost*", sans-serif;
+    font-weight: 100;
+    scale: 70%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50px);
+    color: rgba(255, 215, 0, 0.6);
+
+    div {
+        display: inline-block;
+        height: 100px;
+        max-width: 100px;
+        position: absolute;
+        transform-origin: bottom center;
+        text-align: center;
+    }
+
+    .center-img {
+        margin-top: 115px;
+    }
+}

@@ -9,8 +9,8 @@ import { ContacComponent } from './pages/contac/contac.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SocialsComponent } from './components/socials/socials.component';
-import { LogoComponent } from './componets/logo/logo.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { StampComponent } from './components/stamp/stamp.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import { MenuComponent } from './components/menu/menu.component';
     ProductsComponent,
     AboutComponent,
     SocialsComponent,
-    LogoComponent,
-    MenuComponent
+    MenuComponent,
+    StampComponent
   ],
   imports: [
     BrowserModule,
