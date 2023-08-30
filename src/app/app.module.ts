@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ContacComponent } from './pages/contac/contac.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { SocialsComponent } from './components/socials/socials.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { StampComponent } from './components/stamp/stamp.component';
@@ -17,9 +17,9 @@ import { StampComponent } from './components/stamp/stamp.component';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ContacComponent,
     ProductsComponent,
     AboutComponent,
+    ContactComponent,
     SocialsComponent,
     MenuComponent,
     StampComponent
