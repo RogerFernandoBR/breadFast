@@ -246,11 +246,11 @@
                     margin: 0px !important;
                     padding-left: 25px !important;                      
                     width: calc(100% - 35px);
+                    font-weight: 300;
 
                     &:hover {
-                        background-color: rgba(255, 215, 0, 0.6);
-                        color: black;
-                        font-weight: 500;
+                        background-color: rgb(88 74 0);
+                        color: #ffffff;
                     }
                 }
             }
